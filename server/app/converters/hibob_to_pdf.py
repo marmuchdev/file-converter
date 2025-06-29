@@ -124,12 +124,12 @@ def generate_pdf(zip_file, reviewer, form, answers):
         if item['type'] == 'category':
             for sub_item in item.get('items', []):
                 if sub_item['type'] == 'open_question':
-                    question_map[sub_item['id']] = sub_item['title']
+                    question_map[str(sub_item['id'])] = sub_item['title']
 
     # Add questions and answers
     for answer_item in answers:
-        question_id = answer_item['questionId']
-        question_text = strip_html_tags(question_map.get(question_id, "Unknown Question"))
+        question_id = str(answer_item['questionId'])
+        question_text = strip_html_tags(question_map.get(question_id, f"Question ID: {question_id}"))
         answer_text = strip_html_tags(answer_item['answer']['value'])
         
         story.append(Paragraph(f"Question: {question_text}", heading_style))
