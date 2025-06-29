@@ -4,7 +4,7 @@ A web application with a React Vite frontend and Flask backend to convert JSON f
 
 ## Project Structure
 
-- `client/`: React Vite frontend with navigation (Home, Converters, JSON to PDF).
+- `client/`: React Vite frontend with navigation (Home, Converters, JSON to PDF, HIBOB to PDF).
 - `server/`: Flask backend with a blueprint-based structure for converters.
 
 ## Setup Instructions
