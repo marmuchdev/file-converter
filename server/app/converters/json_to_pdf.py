@@ -11,7 +11,7 @@ def convert_json_to_pdf():
         return {'error': 'No file provided'}, 400
     file = request.files['file']
     if not file.filename.endswith('.json'):
-        return {'error': 'Only JSON files are allowed'}, 40
+        return {'error': 'Only JSON files are allowed'}, 400
     try:
         json_data = json.load(file)
         buffer = BytesIO()
