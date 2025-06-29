@@ -21,13 +21,10 @@ function JsonToPdf() {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      const response = await fetch(
-        "http://localhost:5000/api/convert/json-to-pdf",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch("/api/convert/json-to-pdf", {
+        method: "POST",
+        body: formData,
+      });
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || "Error converting file");
