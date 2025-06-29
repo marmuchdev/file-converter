@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Converters from "./pages/Converters";
 import JsonToPdf from "./pages/JsonToPdf";
+import HibobToPdf from "./pages/HibobToPdf";
 import "./index.css";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/converters" element={<Converters />} />
             <Route path="/converters/json-to-pdf" element={<JsonToPdf />} />
+            <Route path="/converters/hibob-to-pdf" element={<HibobToPdf />} />
           </Routes>
         </div>
       </div>
