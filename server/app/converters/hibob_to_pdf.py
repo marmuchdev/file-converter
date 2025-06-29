@@ -115,7 +115,7 @@ def generate_pdf(zip_file, reviewer, form, answers):
 
     # Add submission date
     submission_date = reviewer['modificationDate']
-    story.append(Paragraph(f"Submission Date: {submission_date}", heading_style))
+    story.append(Paragraph(f"Date: {submission_date}", heading_style))
     story.append(Spacer(1, 0.2 * inch))
 
     # Map answers to questions
