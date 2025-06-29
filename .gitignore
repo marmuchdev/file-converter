@@ -7,14 +7,6 @@ __pycache__/
 *.egg-info/
 pip_log.txt
 
-app/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-app/
-converters/
 __pycache__/
 *.pyc
 *.pyo
