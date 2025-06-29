@@ -10,6 +10,17 @@ services:
       - FLASK_ENV=production
     networks:
       - app-network
+
+  backend-test:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    command: pytest
+    environment:
+      - FLASK_ENV=testing
+    networks:
+      - app-network
+
   frontend:
     build:
       context: ./client
