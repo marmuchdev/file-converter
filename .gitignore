@@ -7,6 +7,19 @@
  *.egg-info/
  pip_log.txt
 
+ app/
+  __pycache__/
+ *.pyc
+ *.pyo
+ *.pyd
+
+  app/
+  converters/
+  __pycache__/
+ *.pyc
+ *.pyo
+ *.pyd
+
  # Node.js
  node_modules/
  dist/
